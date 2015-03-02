@@ -20,3 +20,8 @@ window.dispatchSimpleEvent = function(target, type, canBubble, cancelable) {
   e.initEvent.apply(e, Array.prototype.slice.call(arguments, 1));
   target.dispatchEvent(e);
 }
+window.dispatchChangeEvent = function(target) {
+  var evt = document.createEvent("HTMLEvents")
+  evt.initEvent("change", false, true)
+  target.dispatchEvent(evt)
+}

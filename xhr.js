@@ -1,11 +1,13 @@
-windoe.xhr = function(url, params) {
+window.xhr = function(url, params) {
   return new Promise(function(resolve, reject) {
       var xhr = new XMLHttpRequest()
       xhr.responseType = params&&params.responseType || xhr.responseType
       xhr.timeout = params&&params.timeout || xhr.timeout
       var method = params&&params.method || "GET"
       var data = params&&params.data
+      var mime = params&&params.mime
       xhr.open(method, url)
+      if(mime) xhr.overrideMimeType(mime)
       
       xhr.onload = function() {
           if (xhr.status === 200 || xhr.status === 204) {

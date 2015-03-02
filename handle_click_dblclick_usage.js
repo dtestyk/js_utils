@@ -1,6 +1,4 @@
-Promise.all([
-  load_script_promise("handle_click_dblclick.js")
-]).then(function(){
-  var el=document.querySelector("a")
-  handle(el, alert)
+module('handle_click_dblclick_usage', ['handle_click_dblclick', 'dom_ready'], function(imports){
+  //var handle = imports[1]
+  handle(document, alert)
 })

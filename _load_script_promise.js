@@ -1,4 +1,7 @@
-window.load_script_promise = function(url){
+window.load_script_path = ''
+//window.load_script_path = 'http://127.0.0.1:82/js_utils/'
+window.load_script_promise = function(file){
+        var url = window.load_script_path + file
 	return new Promise(function(resolve, reject){
 		var script = document.querySelector('script[src="'+url+'"]');
 		if(script) resolve(script)

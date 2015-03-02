@@ -1,5 +1,5 @@
 Promise.all([
-  load_script_promise("xhr_open_send_intercept.js")
+  load_script_promise("intercept_xhr_open_send.js")
 ]).then(function(){
   document.addEventListener('xhr open', function (e) {
     console.log('xhr open handler: this: ', this)

@@ -1,6 +1,4 @@
-Promise.all([
-  load_script_promise("intercept_xhr_open_send.js")
-]).then(function(){
+module('intercept_xhr_open_send_usage', ['intercept_xhr_open_send'], function(){
   document.addEventListener('xhr open', function (e) {
     console.log('xhr open handler: this: ', this)
     console.log('xhr open handler: url: ', e.detail.url)

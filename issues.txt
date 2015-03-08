@@ -4,3 +4,15 @@ possible solution: use promise and call resolve() at end of loaded script
 
 solution: all nested depencies to top
 solution: use module
+
+https://gist.github.com/dtestyk/9f68a7db54da5d289e6e
+https://cdn.rawgit.com/dtestyk/9f68a7db54da5d289e6e/raw/
+https://rawgit.com/dtestyk/9f68a7db54da5d289e6e/raw/
+https://rawgit.com/dtestyk/9f68a7db54da5d289e6e/raw/index.html
+
+http://dtestyk.github.io/js_utils/
+https://rawgit.com/dtestyk/js_utils/master/
+https://cdn.rawgit.com/dtestyk/js_utils/master/
+https://cdn.rawgit.com/dtestyk/js_utils/master/index.html
+
+publish: update gist

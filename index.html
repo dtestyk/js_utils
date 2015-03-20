@@ -40,10 +40,12 @@ window.load_script_promise = function(file){
 window.execute_script_promise = function(name){
   return new Promise(function(resolve, reject){
     if(window[name+'_promise']) window[name+'_promise'].then(resolve)
-    else load_script_promise(name+".js")
-    .then(function(){
-      window[name+'_promise'].then(resolve)
-    })
+    else{
+      load_script_promise(name+".js")
+      .then(function(){
+        window[name+'_promise'].then(resolve)
+      })
+    }
   })
 }
 

@@ -8,6 +8,7 @@ http://dtestyk.github.io/js_utils/
 https://rawgit.com/dtestyk/js_utils/master/
 https://cdn.rawgit.com/dtestyk/js_utils/master/
 https://cdn.rawgit.com/dtestyk/js_utils/master/index.html
+https://rawgit.com/dtestyk/js_utils/master/index.html
 
 publish: create new branch, replace path
 

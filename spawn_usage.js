@@ -27,6 +27,7 @@ module('spawn_usage_supervising', ['spawn', 'logg'], function(imports){
     .check(function(){return this.v>0})
     .run(loop)
   })
+
   //sp.start()
   
   spawn()

@@ -3,7 +3,10 @@ module('spawn', [], function(imports){
     var obj = obj || {}
     var queue=[]
     var item_stop = null
+    var must_break = false
     var play = function(){
+      if(must_break){must_break=false; return}
+
       var item = queue.shift()
       if(item){
         if(item.c == 'run'){
@@ -43,6 +46,10 @@ module('spawn', [], function(imports){
       }
     }
     
+    function gap(){
+      must_break = true
+    }
+    
     return{
       run:function(func){
         queue.push({c:'run', f:func})
@@ -77,6 +84,10 @@ module('spawn', [], function(imports){
       },
       append:function(q){
         Array.prototype.push.apply(queue, q)
+        return this
+      },
+      gap:function(){
+        gap()
         return this
       }
     }

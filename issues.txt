@@ -1,6 +1,19 @@
-some depencies may not ready when they call
-example: get_args_obj_usage.js
-possible solution: use promise and call resolve() at end of loaded script
 
-solution: all nested depencies to top
-solution: use module
+https://gist.github.com/dtestyk/9f68a7db54da5d289e6e
+https://cdn.rawgit.com/dtestyk/9f68a7db54da5d289e6e/raw/
+https://rawgit.com/dtestyk/9f68a7db54da5d289e6e/raw/
+https://rawgit.com/dtestyk/9f68a7db54da5d289e6e/raw/index.html
+
+http://dtestyk.github.io/js_utils/
+https://rawgit.com/dtestyk/js_utils/master/
+https://cdn.rawgit.com/dtestyk/js_utils/master/
+https://cdn.rawgit.com/dtestyk/js_utils/master/index.html
+https://rawgit.com/dtestyk/js_utils/master/index.html
+
+publish: create new branch, replace path
+
+module: 
+depencies ['logg', 'spawn', 'create_spawn_server'] loaded ok
+depencies ['spawn', 'create_spawn_server', 'logg'] loaded 1 error in execute_script_promise
+depencies ['create_spawn_server', 'spawn', 'logg'] loaded 2 error in execute_script_promise
+so error if depency load(execute) after loaded from dependant

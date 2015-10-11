@@ -1,6 +1,5 @@
-Promise.all([
-  load_script_promise("namify.js")
-]).then(function(){
+module('intercept_xhr_open_send', ['namify'], function(imports){
+  var namify = imports[0]
   var old_open = XMLHttpRequest.prototype.open
   XMLHttpRequest.prototype.open = function() {
     var detail = namify(arguments, ['method','url','isAsync','user','pass'])
@@ -19,4 +18,5 @@ Promise.all([
       detail.onresponse&&detail.onresponse.call(this, this.response)
     })
   }
+  return Promise.resolve()
 })
